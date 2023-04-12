@@ -12,6 +12,9 @@ struct HomeView: View {
     @EnvironmentObject private var vm : HomeViewModel
     @State private var showPortfolio : Bool = false
     @State private var showPortfolioView : Bool = false
+    
+    @State private var selectedCoin : CoinModel? = nil
+    @State private var showDetailView : Bool = false
     var body: some View {
         ZStack{
             Color.thems.backgroundColor
@@ -41,6 +44,13 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(
+                 destination: DetailLoadingView(coin: $selectedCoin),
+                isActive: $showDetailView,
+                 label: {EmptyView()}
+            )
+        )
     }
 }
 
@@ -91,12 +101,21 @@ extension HomeView{
     private var allCoinList :some View{
         List{
             ForEach(vm.allCoins) { coin in
-                  CoinRowView(coin: coin , showHoldingColumn: false)
-                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    CoinRowView(coin: coin , showHoldingColumn: false)
+                      .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                      .onTapGesture {
+                          segue(coin: coin)
+                      }
+             
             }
         }
         
         .listStyle(PlainListStyle())
+    }
+    
+    private func segue(coin: CoinModel){
+        selectedCoin = coin
+        showDetailView.toggle()
     }
     private var portfolioCoinList :some View{
         List{
@@ -113,14 +132,47 @@ extension HomeView{
     }
     private var columnTitles : some View {
         HStack{
-            Text("Coin")
+            HStack(spacing:4) {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .rotationEffect(Angle(degrees: vm.sortOptions == .rank ? 0 : 180))
+                    .opacity((vm.sortOptions == .rank || vm.sortOptions == .rankReversed) ? 1.0 : 0.0)
+                 
+            }
+            .onTapGesture {
+                withAnimation(.default) {
+                    vm.sortOptions = vm.sortOptions == .rank ? .rankReversed : .rank
+                }
+            }
+            
             Spacer()
             
             if showPortfolio{
-                Text("Holdings")
+                HStack (spacing:4){
+                    Text("Holdings")
+                    Image(systemName: "chevron.down")
+                        .rotationEffect(Angle(degrees: vm.sortOptions == .holdings ? 0 : 180))
+                        .opacity((vm.sortOptions == .holdings || vm.sortOptions == .holdingsreversed) ? 1.0 : 0.0)
+                }
+                .onTapGesture {
+                    withAnimation(.default) {
+                        vm.sortOptions = vm.sortOptions == .holdings ? .holdingsreversed : .holdings
+                    }
+                }
             }
-            Text("Price")
+            
+            HStack(spacing:4) {
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .rotationEffect(Angle(degrees: vm.sortOptions == .price ? 0 : 180))
+                    .opacity((vm.sortOptions == .price || vm.sortOptions == .priceReversed) ? 1.0 : 0.0)
+            }
                 .frame(width:UIScreen.main.bounds.width/3.5,alignment: .trailing)
+                .onTapGesture {
+                    withAnimation(.default) {
+                        vm.sortOptions = vm.sortOptions == .price ? .priceReversed : .price
+                    }
+                }
             Button {
                 withAnimation(.linear(duration: 2.0)){
                     vm.reloadData()
