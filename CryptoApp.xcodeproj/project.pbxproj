@@ -38,6 +38,7 @@
 		4C56BFAB29B8D98100E24ED7 /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C56BFAA29B8D98100E24ED7 /* CoinDetailModel.swift */; };
 		4C56BFAD29B8E2DD00E24ED7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C56BFAC29B8E2DD00E24ED7 /* DetailViewModel.swift */; };
 		4C56BFAF29B8E33D00E24ED7 /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C56BFAE29B8E33D00E24ED7 /* CoinDetailDataService.swift */; };
+		4C87086C29E83A67008CEEE2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C87086B29E83A67008CEEE2 /* SettingsView.swift */; };
 		4CAC47012994E97800FD6D7D /* CircleButtonViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC47002994E97800FD6D7D /* CircleButtonViewAnimation.swift */; };
 		4CAC47042995155800FD6D7D /* CoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC47032995155800FD6D7D /* CoinModels.swift */; };
 		4CAC47062995235300FD6D7D /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC47052995235300FD6D7D /* CoinRowView.swift */; };
@@ -46,6 +47,8 @@
 		4CB265C429ABA28E006D84BA /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB265C329ABA28E006D84BA /* CoinLogoView.swift */; };
 		4CB265C629ABB2E3006D84BA /* xmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB265C529ABB2E3006D84BA /* xmarkButton.swift */; };
 		4CC7DF92299BEFE000804733 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7DF91299BEFE000804733 /* LocalFileManager.swift */; };
+		4CFB4B7829E95E9500A0D8FD /* launchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB4B7729E95E9500A0D8FD /* launchView.swift */; };
+		4CFB4B7A29E9613D00A0D8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFB4B7929E9613D00A0D8FD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,7 @@
 		4C56BFAA29B8D98100E24ED7 /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		4C56BFAC29B8E2DD00E24ED7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4C56BFAE29B8E33D00E24ED7 /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		4C87086B29E83A67008CEEE2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4CAC47002994E97800FD6D7D /* CircleButtonViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonViewAnimation.swift; sourceTree = "<group>"; };
 		4CAC47032995155800FD6D7D /* CoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModels.swift; sourceTree = "<group>"; };
 		4CAC47052995235300FD6D7D /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		4CB265C329ABA28E006D84BA /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		4CB265C529ABB2E3006D84BA /* xmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xmarkButton.swift; sourceTree = "<group>"; };
 		4CC7DF91299BEFE000804733 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		4CFB4B7729E95E9500A0D8FD /* launchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchView.swift; sourceTree = "<group>"; };
+		4CFB4B7929E9613D00A0D8FD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,8 @@
 		4C46211329943E52000062D8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4CFB4B7329E95C1B00A0D8FD /* Launch */,
+				4C87086729E8318A008CEEE2 /* Settings */,
 				4C4621172994409A000062D8 /* Components */,
 				4C46211429943E62000062D8 /* Home */,
 				4C31DCA929B7C9F800DB3FEE /* Detail */,
@@ -274,6 +282,22 @@
 			path = CoinImage;
 			sourceTree = "<group>";
 		};
+		4C87086729E8318A008CEEE2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4C87086829E83197008CEEE2 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4C87086829E83197008CEEE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C87086B29E83A67008CEEE2 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4CAC47022995154300FD6D7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +308,23 @@
 				4C0575D729AD07DE004389A8 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4CFB4B7329E95C1B00A0D8FD /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				4CFB4B7429E95C2800A0D8FD /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		4CFB4B7429E95C2800A0D8FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CFB4B7929E9613D00A0D8FD /* LaunchScreen.storyboard */,
+				4CFB4B7729E95E9500A0D8FD /* launchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFB4B7A29E9613D00A0D8FD /* LaunchScreen.storyboard in Resources */,
 				4C46210A29940CBC000062D8 /* Preview Assets.xcassets in Resources */,
 				4C46210729940CBC000062D8 /* Assets.xcassets in Resources */,
 			);
@@ -374,6 +416,7 @@
 				4C46211C29944485000062D8 /* CircleButtonView.swift in Sources */,
 				4C4B56F1299CE6ED00F30FE5 /* SearchBarView.swift in Sources */,
 				4CAC47042995155800FD6D7D /* CoinModels.swift in Sources */,
+				4CFB4B7829E95E9500A0D8FD /* launchView.swift in Sources */,
 				4C31DCAD29B7CA3900DB3FEE /* DetailView.swift in Sources */,
 				4C454B7829B2730F0038BB84 /* HapticManager.swift in Sources */,
 				4C4B56F3299CF01C00F30FE5 /* UIAplication.swift in Sources */,
@@ -384,6 +427,7 @@
 				4C4621112994140D000062D8 /* Color.swift in Sources */,
 				4C536BFC299AB9CE00FB14E3 /* CoinImageViewModel.swift in Sources */,
 				4C10CADA29E73CBA00845F93 /* String.swift in Sources */,
+				4C87086C29E83A67008CEEE2 /* SettingsView.swift in Sources */,
 				4CAC4708299523EA00FD6D7D /* PreviewProvider.swift in Sources */,
 				4C16D18D29AAB0B00001E74A /* PortfolioView.swift in Sources */,
 				4CAC470A2995360A00FD6D7D /* Double.swift in Sources */,
@@ -525,10 +569,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,10 +603,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

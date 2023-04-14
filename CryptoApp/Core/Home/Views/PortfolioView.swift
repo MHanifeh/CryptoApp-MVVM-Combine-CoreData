@@ -14,6 +14,7 @@ struct PortfolioView: View {
     @State private var selectedCoin : CoinModel? = nil
     @State private var quantityText: String = ""
     @State private var showCheckmark :  Bool = false
+
     
     var body: some View {
         NavigationView {
@@ -30,7 +31,7 @@ struct PortfolioView: View {
                 .navigationTitle("Edite Portfolio")
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        XmarkBtn
+                       XmarkBtn
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                       tralingNavBarButton
@@ -103,7 +104,7 @@ extension PortfolioView {
             Image(systemName: "xmark")
                 .font(.headline)
         })
-        
+
     }
     
     

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct xmarkButton: View {
     @Environment (\.presentationMode) var presentationMode
-    @EnvironmentObject private var vm : HomeViewModel
+
     var body: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }, label: {
             Image(systemName: "xmark")
                 .font(.headline)
-                .foregroundColor(Color.red)
+                .foregroundColor(Color.thems.accentColor)
         })
     }
 }

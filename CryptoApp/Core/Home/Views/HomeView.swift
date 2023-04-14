@@ -10,9 +10,9 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm : HomeViewModel
-    @State private var showPortfolio : Bool = false
-    @State private var showPortfolioView : Bool = false
-    
+    @State private var showPortfolio : Bool = false // anmate right
+    @State private var showPortfolioView : Bool = false // show portfolio
+    @State private var showSettingView : Bool = false // show settings
     @State private var selectedCoin : CoinModel? = nil
     @State private var showDetailView : Bool = false
     var body: some View {
@@ -42,6 +42,9 @@ struct HomeView: View {
                 }
            
                 Spacer(minLength: 0)
+            }
+            .sheet(isPresented: $showSettingView) {
+                SettingsView()
             }
         }
         .background(
@@ -74,6 +77,9 @@ extension HomeView{
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
+                    }
+                    else{
+                        showSettingView.toggle()
                     }
                 }
                 .background(
